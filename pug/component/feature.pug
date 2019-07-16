@@ -1,0 +1,15 @@
+mixin tab-left()
+    each val,key in {"Calendar Input":"compass","Easy Reading":"file-code","Good Foundation":"gem"}
+        .card
+            .card__text
+                h2.card__title= key
+                p.card__body Like any self improving process,<br> everything starts with setting your <br> goals and committing to them
+            .card__icon #[i(class='far fa-'+val)]
+mixin tab-right()
+    each val, key in {"Goal Setting":"file-code","Visual Editor":"calendar-check","Refined Options":"bookmark"}
+        .card
+            .card__text
+                h2.card__title= key
+                p.card__body Like any self improving process,<br> everything starts with setting your <br> goals and committing to them
+            .card__icon #[i(class='far fa-'+val)]
+    

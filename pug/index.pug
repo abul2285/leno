@@ -1,0 +1,158 @@
+include mixin
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title
+        include ./component/stylesheet.pug
+         
+
+        
+    body
+        include ./layout/navigation.pug
+        include ./layout/hero.pug
+        section.slider-1
+            .slider-1__wrapper
+                .slider-1__box
+                    +slide1()
+        
+        section.features#Features
+            .container
+                    .title
+                        h2.title__heading FEATURES
+                        p.title__description Leno was designed based on input from personal development <br> coaches and popular trainers so it offers all
+                    ul.tabBar
+                        li.tabBar__items
+                            a.tabBar__links.active(href=null data-toggle='tab-1') #[i(class='fas fa-cog')] CONFIGURING
+                        li.tabBar__items
+                            a.tabBar__links(href=null data-toggle='tab-2')  #[i(class='fas fa-binoculars')] TRACKING
+                        li.tabBar__items
+                            a.tabBar__links(href= null data-toggle='tab-3')  #[i(class='fas fa-search')] MONITORING
+                    .tabBar__content
+                        .tabBar__content--item.active#tab-1
+                            .tabBar__content--item--left
+                                +tab-left()
+                            .tabBar__content--item--middle
+                                img(src='../images/features-iphone-1.png')
+                            .tabBar__content--item--right
+                                +tab-right()
+                        .tabBar__content--item#tab-2
+                            .tabBar__content--item--middle
+                                img(src='../images/features-iphone-1.png')
+                            .tabBar__content--item--left
+                                +tab-left()
+                            .tabBar__content--item--right
+                                +tab-right()
+                        .tabBar__content--item#tab-3
+                            .tabBar__content--item--left
+                                +tab-left()
+                            .tabBar__content--item--right
+                                +tab-right()
+                            .tabBar__content--item--middle
+                                img(src='../images/features-iphone-1.png')
+        section.preview#Previews
+            .preview__wrapper
+                .preview__box
+                    .title
+                        h2.title__heading priview
+                        p.title__description Target the right customers for your business with the help of <br> Leno's patented segmentation technology
+                    img.preview__img(src='../images/video-frame.jpg')
+                    span.preview__button
+
+        section.display
+            .display__wrapper
+                .display__items
+                    img.display__img(src="../images/details-1-iphone.png", alt="")
+                .display__items
+                    h3 goal setting
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde at numquam in ipsum quidem odio impedit. Consequatur rerum, asperiores ducimus minus esse sint vero voluptatem quibusdam atque eum facilis repudiandae sed optio. Similique doloribus deserunt perferendis aliquid sequi alias illo perspiciatis minima consequatur placeat.
+                    a.btn lightbox
+                .display__items
+                    h3 calender input
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt totam est in porro, saepe quasi ipsa quibusdam molestias asperiores ut ad tenetur aut quia repellendus magnam! Sequi perferendis corporis aliquid harum corrupti ea eius iusto. Reprehenderit qui porro omnis nostrum sit soluta eius.
+                    a.btn lightbox
+                .display__items
+                    img.display__img(src="../images/details-2-iphone.png", alt="")
+        section.slider-2
+            .slider-2__wrapper
+                .slider-2-box
+                    +slide2()
+        section.download#Details
+            .download__wrapper
+                .download__item
+                    .download__text
+                        .title
+                            h2.title__heading download leno
+                            p.title__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, consectetur facilis, corporis tempore dolore dicta inventore amet facere deleniti commodi veniam numquam in atque modi optio aut odit voluptatem quasi? Voluptas, eius accusantium.
+                        .download__button
+                            a(href="").btn #[i.fab.fa-apple] app store
+                            a(href="").btn #[i.fas.fa-caret-right] play store
+                .download__item
+                    img.download__img(src='../images/download.png')
+        section.couter
+            .counter__wrapper
+                .counter__items
+                    .counter__box
+                        span.counter__number 231
+                        p Happy users
+                .counter__items
+                    .counter__box
+                        span.counter__number 85
+                        p Issues solved
+                .counter__items
+                    .counter__box
+                        span.counter__number 58
+                        p Good reviews
+                .counter__items
+                    .counter__box
+                        span.counter__number 136
+                        p Case study
+        section.contact#Contact
+            .contact__wrapper
+                form.contact__form
+                    .title
+                        h2.title__heading contact 
+                        p.title__description Don't hesitate to give us a call or just use the contact form below <br> #[i(class="fas fa-map-marker-alt")] 22 Innovative, San Francisco, CA 94043, US <br> #[i(class="fas fa-phone-alt")]+81 720 2212 #[i(class='far fa-envelope')]office@leno.com
+                    +form()
+                    input.contact__checkbox(type="checkbox" name="agree" id="checkbox") 
+                    label(for='checkbox') I have read and agree to Leno's
+                    a.contact__button(type='submit') submit message
+        section.footer
+            .footer__wrapper
+                .footer__item
+                    h2 about leno
+                    p Lorem, ipsum dolor sit amet consectetur adipisi <br>santium natus placeat explicabo hic consequuntur 
+                .footer__item
+                    h2 important links
+                    ul
+                        li our business partner #[a lenobond.com]
+                        li read our #[a term and condition]
+                .fotter__item
+                    h2 social media
+                    ul.social__media
+                        li.social__icon #[i(class='fab fa-facebook-f')]
+                        li.social__icon #[i(class='fab fa-twitter')]
+                        li.social__icon #[i(class='fab fa-google-plus')]
+                        li.social__icon #[i(class='fab fa-linkedin-in')]
+                        li.social__icon #[i(class='fab fa-pinterest-p')]
+                .footer__copyright Copyright © Leno - Mobile App Landing Page Template by Inovatik
+    include ./component/script.pug
+    
+    
+        
+       
+    
+        
+
+        
+
+
+    
+        
+        
+        
+
+        

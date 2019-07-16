@@ -1,0 +1,61 @@
+.preview {
+    padding: 10rem;
+    background: url('../images/video-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    &__wrapper {
+        position: relative;
+    }
+    &__box {
+
+    }
+    &__img {
+        width: 100%;
+    }
+    &__button {
+        background-color: rgb(40, 153, 218);
+        @include size(8rem);
+        @include absolute(50%,50%);
+        border-radius: 50%;
+        // position: relative;
+        display: grid;
+        place-items: center;
+        z-index: 4;
+
+        
+        &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border: 2rem solid transparent;
+            border-right: 0px;
+            border-left: 2rem solid #fff;
+          }
+        &::after{
+            display: block;
+            content: "";
+            @include size(33rem);
+            position: absolute;
+            background-color: rgb(40, 153, 218);
+            clip-path: circle(15% at center center);
+            z-index: -2;
+            transition: all 1s ease-in-out;
+            animation: pulse-border 1500ms ease-out infinite;
+        }
+    }
+}
+
+
+
+@keyframes pulse-border {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}

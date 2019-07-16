@@ -1,0 +1,9 @@
+mixin portfolioboxes()
+    each val in ['Design','Programming','Web']
+        each key in [1,2,3]
+            .mix(class= val).wow.rollIn.portfolio__boxes
+                img.portfolio__img(src='../imgs/portfolio/'+val+'-'+key+'.jpg')
+
+mixin portfolioButton()
+    each val in ['Design','Programming','Web']
+        button.portfolio__button(type='button', data-filter='.'+ val)= val

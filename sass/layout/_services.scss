@@ -1,0 +1,12 @@
+.services {
+    background-color: #eee;
+    &__wrapper {
+        @include grid-container()
+    }
+    &__box {
+        @include grid-column(4);
+        text-align: center;
+        padding: 2rem;
+    }
+    @include grid-2;
+}

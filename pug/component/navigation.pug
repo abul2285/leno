@@ -1,0 +1,5 @@
+mixin nav()
+    each val in ['Home','Features','Previews',"Details",'Contact']
+        li.navbar__items
+            a.navbar__links(href= '#' + val)= val
+    

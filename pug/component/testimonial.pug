@@ -1,0 +1,7 @@
+mixin testimonial()
+    each val,key in {box1:1,box2:2,box3:3,box4:4}
+        .col-md-6.mb-3
+            .testimonial__boxes.wow.flipInX
+                img.testimonial__img(src='../imgs/portfolio/web-'+val+'.jpg')
+                .testimonial__description
+                    h2= key

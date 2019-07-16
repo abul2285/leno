@@ -1,0 +1,25 @@
+.download {
+    background: url('../../images/download-background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 5rem;
+    &__wrapper {
+        @include grid-container;
+    }
+    &__item {
+        @include grid-column(6);
+    
+    }
+    &__text {
+
+    }
+    &__img {
+        width: 40rem;
+    }
+    &__button {
+        i {
+            color: white;
+        }
+    }
+}

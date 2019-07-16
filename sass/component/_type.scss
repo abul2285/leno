@@ -1,0 +1,34 @@
+.title {
+    text-align: center;
+    margin: 3rem auto;
+    &__heading {
+        @include wobble-horizontal();
+        display: inline-block;
+        position: relative;
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        color: lime;
+        &:before,&:after {
+            content: "";
+            position: absolute;
+            top: 60%;
+            height: 5px;
+            width: 2rem;
+            background-color: lime;
+
+        }
+        &:before{
+            left: -4rem;
+        }
+        &:after {
+            right: -4rem;
+
+        }
+    }
+    &__description {
+        font-size: 2rem;
+        text-align: center;
+        // color: #777;
+    }
+}

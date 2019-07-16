@@ -1,0 +1,8 @@
+mixin counter()
+    each val, key in {"home":'Years of Experienced',"university":'Trusted Clients',"globe":'Qualified Lawyers',"address-book":'Honors & Awards'}
+        .counter__box
+            .counter__style
+                |
+                |
+                i.counter__icon.fa(class='fa-'+key, aria-hidden='true')
+                h3= val

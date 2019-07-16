@@ -1,0 +1,19 @@
+.footer {
+    background: #262431;
+    color: #fff;
+
+    &__wrapper {
+        @include grid-container;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+    &__item {
+        @include grid-column(4);
+        height: 20rem;
+    }
+    &__copyright {
+        @include grid-column(12);
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,230 @@
+
+// navigation is starting
+
+
+.navbar {
+    background-color: #4633AF;
+    display: flex;
+    position: relative;
+    height: 6rem;
+    padding: 1rem;
+
+
+    &__logo {
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    &__img{
+        width: 40%;
+        height: 4rem;
+    }
+    &__nav {
+        @include absolute(100%,0);
+
+    }
+    &__menu {
+        background-color: rgb(156, 156, 142);
+        clip-path: circle(0px at top right);
+        transition: clip-path .2s ease-in-out;
+
+        &--open {
+            clip-path: circle(200% at top right);
+        }
+        
+    }
+    &__items {
+        &:not(:last-child){
+            border-bottom: 1px solid #575766;
+        }
+    }
+    &__links {
+        padding: 1rem 8rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        color: #fff;
+
+        &:active {
+            color: #13A0CF;
+        }
+
+        @include hover(){
+            color: #13A0CF;
+        };
+
+    }
+    &__toggler {
+        @include absolute(6px,4px);
+        padding: 2rem;
+        cursor: pointer;
+
+        &--open {
+                .navbar__icon {
+                    transform: rotate(45deg);
+                    &::before {
+                        opacity: 0;
+                    }
+                    &::after {
+                        transform: translateY(-3px) rotate(90deg);
+                    }
+                }
+        }
+        
+    }
+    &__icon {
+        $icon: &;
+        &,
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            @include size(2rem, 3px);
+            background-color: #5c24dd;
+        }
+        &::before {
+            transform: translateY(-6px);
+        }
+        &::after {
+            transform: translateY(3px);
+        }
+    }
+}
+
+
+@include responsive(desktop){
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__toggler {
+            display: none;
+        }
+
+        &__logo {
+        }
+
+        &__nav {
+            position: initial;
+        }
+        &__menu {
+            display: flex;
+            background-color: transparent;
+            clip-path: initial;
+        }
+        &__items {
+            &:not(:last-child){
+                border-bottom:none;
+            }
+        }
+        &__links {
+            padding: 1rem 1.2rem;
+            @include float-shadow();
+        }
+    }
+}
+.fa-university {
+    font-size: 3rem;
+    margin-left: 1rem;
+    // color: lime;
+}
+
+.navbar__text {
+    margin-left: 2rem;
+    font-size: 3rem;
+    // display: block;
+}
+
+
+
+.features {
+    background-color: #2F2C3D;
+    color: white;
+    padding: 5rem;
+
+}
+.tabBar {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    &__items {
+        display: block;
+        
+        &:not(:last-child){
+            margin-right: -1rem;
+        }
+    }
+    &__content {
+        padding: 5rem;
+        // background: #ccc;
+
+        &--item {
+            display: flex;
+            justify-content: space-between;
+            height: 55rem;
+            margin-bottom: 5rem;
+            transition: all .5s ease-in-out;
+
+            &--left,&--right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .card {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i {
+                        font-size: 3rem;
+                        @include crl(5rem);
+                        background: #00C9DB;
+                        color: white;
+                        display: grid;
+                        place-items: center;
+                    }
+                }
+            }
+            &--middle {
+                // height:30rem; 
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    &__links {
+        padding: 2rem 5rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        // color: rgb(100, 82, 133);
+
+        
+        border-bottom: 3px solid #dbdbdd;
+        
+        &.active {
+            border-bottom: 3px solid blue;
+            color: blue;
+        }
+        
+        @include hover(){
+            color: blue;
+            border-bottom: 3px solid blue;
+        };
+
+    }
+}
+
+.tabBar__content--item {
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+}

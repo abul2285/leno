@@ -1,0 +1,23 @@
+.social {
+
+    &__media {
+
+        display: flex;
+    }
+
+    &__icon > *{
+
+
+            font-size: 3rem;
+            padding: 1rem 1rem;
+            @include crl(5rem);
+            background: #F0F0F7;
+            color: black;
+            margin: 1rem;
+
+            &:hover {
+                background-color: #00C9DB;
+                color: #fff;
+            }
+    }
+}

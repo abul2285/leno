@@ -1,0 +1,7 @@
+mixin team()
+    each val, key in {John:1,Jack:2,Rock:3}
+        .col-md-4
+            .team__wrapper.wow.slideInLeft(data-wow-duration='2s')
+                img.team__img.team__item(src='../imgs/team/team-'+val+'.jpg')
+                .team__description.team__item
+                    h3= key

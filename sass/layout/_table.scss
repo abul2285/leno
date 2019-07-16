@@ -1,0 +1,74 @@
+.price {
+    margin: 1rem;
+    &__table {
+        position: relative;
+        padding:1rem;
+        text-align: center;
+        background-color: rgb(128, 226, 128);
+        width: 200px;
+        margin: 1rem auto;
+        height: auto;
+        @include border-top-radius(30px);
+        overflow: hidden;
+        box-shadow: 2px 3px 4px 0 #999;
+        box-sizing: border-box;
+        box-shadow: -1px 1px 1px 0px rgba(black, .1),
+                    -2px 2px 1px 0px rgba(black, .2),
+                    -3px 3px 1px 0px rgba(black, .3),
+                    -4px 4px 1px 0px rgba(black, .4),
+                    -5px 5px 1px 0px rgba(black, .5),
+                    -6px 6px 1px 0px rgba(black, .6),
+                    -7px 7px 1px 0px rgba(black, .7),
+                    -8px 8px 1px 0px rgba(black, .8),
+                    -9px 9px 1px 0px rgba(black, .9),
+                    -10px 10px 1px 0px rgba(black, 1);
+                    &:hover .price__heading{
+                        transform: rotate(0);
+                        top: 10px;
+                        left: 0;
+                        background-color: #000;
+                        color: #fff;
+
+                    }
+                    &:hover .price__value{
+                        @include bubble-top();
+                    }
+    }
+    &__value {
+        margin-top: 40px;
+        color: orangered;
+        transform: rotateX(50deg) rotateY(-20deg);
+        text-shadow:0px 1px 0px rgba(black, .1),
+                    1px 1px 0px rgba(black, .2),
+                    2px 1px 0px rgba(black, .3),
+                    3px 1px 0px rgba(black, .4),
+                    4px 1px 0px rgba(black, .5),
+                    5px 1px 0px rgba(black, .5),
+                    6px 1px 0px rgba(black, .6);
+        font-size: 55px;
+    }
+    &__heading {
+        position: absolute;
+        top: 20px;
+        right: -40px;
+        text-transform: uppercase;
+        width: 200px;
+        background-color: #fff;
+        transform: rotate(40deg);
+        color: #aaa;
+    }
+    &__menu{
+        color: #999;
+        font-size: 16px;
+        line-height: 1.7;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    &__button {
+        padding: 6px 12px;
+        color: green;
+        text-transform: uppercase;
+        margin: 3px auto;
+    }
+}

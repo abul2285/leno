@@ -1,0 +1,5 @@
+mixin tabs()
+    each val in [2,3]
+        li(class="nav-item")
+            a(class="nav-link" id="nav-tab-"+val data-toggle="tab" href="#tab-"+val role="tab" aria-controls="tab-"+val aria-selected=false)
+                i(class="fas fa-cog") CONFIGURING
