@@ -14,8 +14,15 @@
     }
     &__items {
         @include grid-column(6);
-        @include grid-2;
         margin-bottom: 2rem;
+        @include mq($until: desktop) {
+            width: 100%;
+            .banner__img img {
+                width: 60%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
     }
     &__text {
         display: flex;
@@ -33,11 +40,16 @@
                 position: absolute;
                 margin-left: 1rem ;
             }
+            @include mq($until: tablet) {
+                font-size: 3rem;
+            }
         }
     }
 
     &__img {
-
+        img {
+            width: 100%;
+        }
     }
 
 }

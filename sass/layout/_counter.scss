@@ -6,33 +6,31 @@
     background-color: #262431;
         // background-color: #fff;
         @include grid-container();
+
+    }
+    &__items {
+
+      @include grid-column(3);
+
+      @include mq($until: tablet) {
+        width: 100%;
+    }
     }
     &__box {
-        // background-color: #000000;
-        @include grid-column(3);
-        margin-left: 0 !important;
+        display: grid;
+        place-items: center;
         margin-bottom: 1rem;
         height: 30rem;
-        width: 25% !important;
-        text-align: center;
         font-size: 1.6rem;
-        @include grid-4;
-        position: relative;
 
         @at-root {
           .counter__number {
-            position: absolute;
-            left: 10rem;
             font-size: 8rem;
-            margin-top: 5rem;
             color: #fff;
             font-weight: bold;
             + p {
               color: green;
               font-size: 2rem;
-              position: absolute;
-              top: 50%;
-              left: 30%;
             }
           }
         }

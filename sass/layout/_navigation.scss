@@ -165,7 +165,7 @@
         &--item {
             display: flex;
             justify-content: space-between;
-            height: 55rem;
+            // height: 55rem;
             margin-bottom: 5rem;
             transition: all .5s ease-in-out;
 
@@ -191,9 +191,36 @@
                 }
             }
             &--middle {
-                // height:30rem; 
                 img {
-                    height: 100%;
+                    width: 80%;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            @include mq($until: tablet) {
+                flex-direction: column;
+                height: auto;
+
+                > div {
+                    display: block;
+                    width: 100%;
+                    &:not(:last-child){
+                        margin-bottom: 3rem;
+                    }
+                    img {
+                        width: 60%;
+                    }
+                }
+
+            }
+            @include mq($from: tablet) {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                &--middle {
+                    img {
+                        // width: 60%;
+                        margin: 0 auto;
+                    }
                 }
             }
         }
