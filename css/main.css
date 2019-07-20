@@ -4962,7 +4962,7 @@ i {
 }
 
 .navbar__links:hover, .navbar__links:focus, .navbar__links:active {
-  color: #13A0CF;
+  color: orange;
 }
 
 .navbar__toggler {
@@ -5462,28 +5462,11 @@ i {
 
 .title__heading {
   display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  display: inline-block;
   position: relative;
   font-size: 3rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
   color: lime;
-}
-
-.title__heading:hover, .title__heading:focus, .title__heading:active {
-  -webkit-animation-name: hvr-wobble-horizontal;
-  animation-name: hvr-wobble-horizontal;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
 }
 
 .title__heading:before, .title__heading:after {
@@ -5530,6 +5513,9 @@ i {
   background: #F0F0F7;
   color: black;
   margin: 1rem;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
 }
 
 .social__icon > *:hover {
@@ -5550,9 +5536,9 @@ i {
 }
 
 .btn:hover {
-  border: 1px solid #66d5e4;
-  color: #66d5e4;
+  color: orangered;
   background-color: #333333;
+  cursor: pointer;
 }
 
 .btn i {
@@ -5823,10 +5809,10 @@ i {
   background-color: #66d5e4;
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .contact__button:hover {
-  border: 1px solid #66d5e4;
   color: #66d5e4;
   background-color: #333333;
 }

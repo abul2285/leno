@@ -17,6 +17,8 @@
             background: #F0F0F7;
             color: black;
             margin: 1rem;
+            transition:  all .5s ease-in-out;
+            cursor: pointer;
 
             &:hover {
                 background-color: #00C9DB;
