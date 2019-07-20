@@ -4955,14 +4955,15 @@ i {
   text-decoration: none;
   display: block;
   color: #fff;
+  font-size: 1.5rem;
 }
 
 .navbar__links:active {
-  color: #13A0CF;
+  color: orangered;
 }
 
 .navbar__links:hover, .navbar__links:focus, .navbar__links:active {
-  color: orange;
+  color: orangered;
 }
 
 .navbar__toggler {
@@ -5222,17 +5223,19 @@ i {
   text-transform: uppercase;
   text-decoration: none;
   display: block;
+  font-size: 2rem;
+  cursor: pointer;
   border-bottom: 3px solid #dbdbdd;
 }
 
 .tabBar__links.active {
-  border-bottom: 3px solid blue;
-  color: blue;
+  border-bottom: 3px solid orangered;
+  color: orangered;
 }
 
 .tabBar__links:hover, .tabBar__links:focus, .tabBar__links:active {
-  color: blue;
-  border-bottom: 3px solid blue;
+  color: orangered;
+  border-bottom: 3px solid orangered;
 }
 
 .tabBar__content--item {
@@ -5533,9 +5536,11 @@ i {
   border-radius: 3rem;
   text-decoration: none;
   background: #00C9DB;
+  border: 1px solid transparent;
 }
 
 .btn:hover {
+  border: 1px solid #66d5e4;
   color: orangered;
   background-color: #333333;
   cursor: pointer;
@@ -5644,6 +5649,8 @@ i {
   float: left;
   margin-left: 20px;
   height: 40rem;
+  margin-bottom: 6rem;
+  padding: 3rem;
   text-align: justify;
 }
 
@@ -5809,10 +5816,12 @@ i {
   background-color: #66d5e4;
   color: #fff;
   font-weight: bold;
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
 .contact__button:hover {
+  border: 1px solid #66d5e4;
   color: #66d5e4;
   background-color: #333333;
 }

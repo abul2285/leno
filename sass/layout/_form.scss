@@ -55,10 +55,11 @@
         background-color: rgb(102, 213, 228);
         color: #fff;
         font-weight: bold;
+        border: 1px solid transparent;
         cursor: pointer;
        
         &:hover {
-            // border: 1px solid rgb(102, 213, 228);
+            border: 1px solid rgb(102, 213, 228);
             color: rgb(102, 213, 228);
             background-color: #333333;
         }
