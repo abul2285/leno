@@ -1,6 +1,7 @@
 .footer {
     background: #262431;
     color: #fff;
+    padding: 5rem 2rem 1rem;
 
     &__wrapper {
         @include grid-container;

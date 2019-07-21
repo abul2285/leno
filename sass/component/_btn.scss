@@ -9,6 +9,7 @@
     text-decoration: none;
     background: #00C9DB;
     border: 1px solid transparent;
+    transition: all .5s ease-in-out;
     &:hover {
         border: 1px solid rgb(102, 213, 228);
         color: orangered;

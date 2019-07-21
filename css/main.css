@@ -5537,6 +5537,8 @@ i {
   text-decoration: none;
   background: #00C9DB;
   border: 1px solid transparent;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .btn:hover {
@@ -5693,9 +5695,19 @@ i {
 }
 
 .counter__box {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 1rem;
   height: 30rem;
   font-size: 1.6rem;
@@ -5709,6 +5721,7 @@ i {
 
 .counter__number + p {
   color: green;
+  margin-top: -2rem;
   font-size: 2rem;
 }
 
@@ -5818,6 +5831,8 @@ i {
   font-weight: bold;
   border: 1px solid transparent;
   cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .contact__button:hover {
@@ -5835,6 +5850,7 @@ i {
 .footer {
   background: #262431;
   color: #fff;
+  padding: 5rem 2rem 1rem;
 }
 
 .footer__wrapper {
